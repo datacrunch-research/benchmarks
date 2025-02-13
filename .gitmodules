@@ -1,0 +1,15 @@
+[submodule "submodules/tritonbench"]
+	path = submodules/tritonbench
+	url = https://github.com/pytorch-labs/tritonbench.git
+[submodule "submodules/simple-gpt"]
+	path = submodules/simple-gpt
+	url = https://github.com/antferdom/simple-gpt.git
+[submodule "submodules/lingua"]
+	path = submodules/lingua
+	url = https://github.com/facebookresearch/lingua.git
+[submodule "submodules/torchtitan"]
+	path = submodules/torchtitan
+	url = https://github.com/pytorch/torchtitan.git
+[submodule "submodules/sglang"]
+	path = submodules/sglang
+	url = https://github.com/sgl-project/sglang.git
