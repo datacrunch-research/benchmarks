@@ -45,7 +45,7 @@ No docs → SO docs
 
 ### **docs**
 
-Tritonbench is a repo for profiling and testing a variety of custom kernels for general operations in LLMs.
+Tritonbench is a collection of PyTorch custom operators with example inputs to measure their performance.
 
 - Custom kernels
     - (CUDA, HIP) [kernels](https://github.com/triton-lang/kernels)
@@ -59,7 +59,7 @@ Tritonbench is a repo for profiling and testing a variety of custom kernels for 
     
 - Folder structure
     - operators: different operators to choose from
-      
+  ```bash    
         ├── addmm
         ├── bf16xint16_gemm
         ├── cross_entropy
@@ -100,16 +100,17 @@ Tritonbench is a repo for profiling and testing a variety of custom kernels for 
         ├── test_op
         ├── vector_add
         └── welford
-        
+  ```
     - kernels: Triton implementation of the Flash Attention v2
     - benchmarks: Perform simple benchmarks indicating tflops
-      
+  ```bash
         ├── compile_time
         ├── flash_attention_bench
         ├── gemm_bench
         └── nightly
         
     - tests:
+  ```
 - Arguments `run.py`
     - `-op` - Operators to benchmark. Split with commas if multiple.
     - `-op-collection` - Operator collections to benchmark. Conflicts with `-op`. Choices: `default`, `liger`, `all`.
