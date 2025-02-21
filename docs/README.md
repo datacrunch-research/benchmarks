@@ -108,9 +108,9 @@ Tritonbench is a collection of PyTorch custom operators with example inputs to m
         ├── flash_attention_bench
         ├── gemm_bench
         └── nightly
-        
+  ```  
     - tests:
-  ```
+
 - Arguments `run.py`
     - `-op` - Operators to benchmark. Split with commas if multiple.
     - `-op-collection` - Operator collections to benchmark. Conflicts with `-op`. Choices: `default`, `liger`, `all`.
@@ -131,9 +131,9 @@ Tritonbench is a collection of PyTorch custom operators with example inputs to m
             "fx_int8",
             "bf16",    
             "amp_fp16",
-        		"amp_bf16",
-        		"fp8",
-        		]
+            "amp_bf16",
+            "fp8",
+            ]
         ```
         
     - `-device` - Device to benchmark. Default: `cuda`.
@@ -204,8 +204,8 @@ CONFIG_FILE="./train_configs/llama3_8b.toml" ./run_llama_train.sh
 
 Caveats:
 
-- HF_TOKEN needs to be specified in the host
-- WORKDIR specified for torch-titan commands
+- `HF_TOKEN` needs to be specified in the host
+- `WORKDIR` specified for torch-titan commands
 - Examples of commands as comments in the end
 - `<local_HF_HOME>:<container_HF_HOME>` loading from local nvme
 
@@ -267,13 +267,11 @@ RUN python torchtitan/datasets/download_tokenizer.py --repo_id meta-llama/Meta-L
 
 GPU metrics:
 
-[torchtitan](https://github.com/pytorch/torchtitan/blob/main/docs/metrics.md): loss, GPU Memory, Token per second per device([tps](https://github.com/pytorch/torchtitan/blob/fb0a942f1ff25db7512c814b413226a53cd83c4a/train.py#L360)) and mfu
+[torchtitan](https://github.com/pytorch/torchtitan/blob/main/docs/metrics.md): GPU Memory, Token per second per device([tps](https://github.com/pytorch/torchtitan/blob/fb0a942f1ff25db7512c814b413226a53cd83c4a/train.py#L360)) and mfu
 
 tritonbench: FLOPS, latency, and speedup (relative to other kernels)
 
-CPU metrics:
-
-to be researched when GPU metrics are affected
+CPU metrics: CPU usage, memory used
 
 ### torchtitan
 
